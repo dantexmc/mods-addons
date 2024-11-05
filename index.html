@@ -4,105 +4,133 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comunidad Minecraft</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
     <style>
         /* Estilos generales */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
         }
 
-        body, html {
-            height: 100%;
-            font-family: Arial, sans-serif;
+        /* Fondo y colores de la página */
+        body {
+            background-color: #1e1e1e;
             color: #ffffff;
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
-            text-align: center;
         }
 
-        /* Fondo de la página */
-        .background {
-            background-image: url('https://images6.alphacoders.com/380/380205.jpg'); /* Imagen de fondo de Minecraft */
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            height: 100%;
+        /* Barra de navegación superior */
+        .navbar {
+            position: fixed;
+            top: 0;
             width: 100%;
+            background-color: #333333;
+            padding: 15px;
             display: flex;
-            align-items: center;
             justify-content: center;
+            z-index: 100;
         }
 
-        /* Contenedor principal */
-        .container {
-            background: rgba(0, 0, 0, 0.7); /* Fondo semitransparente para resaltar el contenido */
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-            max-width: 400px;
-            width: 90%;
+        .navbar a {
+            color: #ff8c00;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
+            font-size: 1.1em;
         }
 
-        /* Sección del título */
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
+        /* Sección de bienvenida */
+        .welcome-section {
+            margin-top: 100px;
+            text-align: center;
+            padding: 40px;
+            width: 100%;
+            max-width: 900px;
+        }
+
+        .welcome-section h1 {
+            font-size: 3em;
             color: #ff8c00;
         }
 
-        /* Estilos de los botones */
-        .button {
-            display: inline-block;
-            padding: 12px 20px;
-            margin: 15px 0;
+        .welcome-section p {
             font-size: 1.2em;
-            font-weight: bold;
-            color: #ffffff;
-            background-color: #4caf50; /* Verde estilo Minecraft */
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background-color 0.3s;
+            margin-top: 10px;
+            color: #cccccc;
+        }
+
+        /* Contenedor de enlaces principales */
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 30px 0;
             width: 100%;
+            max-width: 600px;
         }
 
-        .button:hover {
-            background-color: #66bb6a; /* Verde un poco más claro */
+        /* Botones de enlaces */
+        .link-button {
+            display: block;
+            width: 100%;
+            max-width: 400px;
+            padding: 15px;
+            margin: 15px 0;
+            background-color: #333333;
+            color: #ff8c00;
+            text-decoration: none;
+            text-align: center;
+            font-size: 1.3em;
+            font-weight: 600;
+            border-radius: 8px;
+            transition: background-color 0.3s;
         }
 
-        /* Botones específicos para cada sección */
-        .mods-button {
-            background-color: #ff8c00;
+        .link-button:hover {
+            background-color: #444444;
         }
 
-        .discord-button {
-            background-color: #5865F2;
+        /* Pie de página */
+        .footer {
+            margin-top: 50px;
+            padding: 20px;
+            text-align: center;
+            color: #777777;
+            font-size: 0.9em;
         }
 
-        .tiktok-button {
-            background-color: #c13584;
-        }
     </style>
 </head>
 <body>
 
-    <div class="background">
-        <div class="container">
-            <!-- Título de la página -->
-            <h1>Comunidad Minecraft</h1>
-
-            <!-- Sección de Mods -->
-            <a href="mods.html" class="button mods-button">Mods</a>
-
-            <!-- Sección de Discord -->
-            <a href="https://discord.gg/FtTBsVzW6c" target="_blank" class="button discord-button">Comunidad en Discord</a>
-
-            <!-- Sección de TikTok -->
-            <a href="https://www.tiktok.com/@dantermc._" target="_blank" class="button tiktok-button">Perfil de TikTok</a>
-        </div>
+    <!-- Barra de navegación -->
+    <div class="navbar">
+        <a href="#mods">Mods</a>
+        <a href="https://discord.gg/FtTBsVzW6c" target="_blank">Discord</a>
+        <a href="https://www.tiktok.com/@dantermc._" target="_blank">TikTok</a>
     </div>
+
+    <!-- Sección de bienvenida -->
+    <section class="welcome-section">
+        <h1>Bienvenido a la Comunidad Minecraft</h1>
+        <p>Explora mods, únete a nuestra comunidad en Discord y sigue nuestras novedades en TikTok.</p>
+    </section>
+
+    <!-- Contenedor de enlaces principales -->
+    <div class="links-container">
+        <a href="mods.html" class="link-button" id="mods">Ver Mods</a>
+        <a href="https://discord.gg/FtTBsVzW6c" target="_blank" class="link-button">Unirse a Discord</a>
+        <a href="https://www.tiktok.com/@dantermc._" target="_blank" class="link-button">Ver en TikTok</a>
+    </div>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <p>&copy; 2024 Comunidad Minecraft. Todos los derechos reservados.</p>
+    </footer>
 
 </body>
 </html>
